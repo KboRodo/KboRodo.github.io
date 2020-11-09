@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EncryptIt!</title>
+
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="./encryptors/playfair.js" defer></script>
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">Szyfr Cezara</a></li>
+        <li><a href="vigenere.html">Szyfr Vigenere</a></li>
+        <li><a href="playfair.html">Szyfr Playfaira</a></li>>
+    </ul>
+    <h1>EncryptIt!</h1>
+    <div class="main-box">
+        <h2>Szyfrowanie szyfrem Playfaira</h2>
+        <button class="mode-selector active" id="encrypt" id="encrypt">Zaszyfruj</button>
+        <button class="mode-selector" id="decrypt">Odszyfruj</button>
+        <div class="input-area">
+            <form >
+                <input type="text" id="input-text" placeholder="Podaj tekst do zaszyfrowania...">
+            </form>
+        </div>
+        <div class="option-menu">
+            <label for="diff">Podaj słowo-klucz </label><br>
+            <input type="text" id="keyword"><br>
+            <button class="encrypt-selector" id="playfair">Szyfruj</button>
+        </div>
+        <h3>Zaszyfrowany tekst: </h3>
+        <div class="output-area">
+            <p id="output-text"></p>
+        </div>
+    </div>
+    
+</body>
+</html>
