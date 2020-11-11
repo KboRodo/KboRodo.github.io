@@ -20,7 +20,7 @@ modeEncrypt.click()
 
 function encryptCeasar(){//zaszyferowanie tekstu według klucza
     const move=moveBy.value
-    const inputText=document.getElementById('input-text').value;
+    const inputText=document.getElementById('input-text').value.toLowerCase();
     const output=document.getElementById('output-text');
     const inputArray=inputText.split('')
     let index
@@ -50,7 +50,7 @@ function encryptCeasar(){//zaszyferowanie tekstu według klucza
 
 function decryptCeasar(){//ODSZYFROWANIE TEKSTU
     const move=moveBy.value
-    const inputText=document.getElementById('input-text').value;
+    const inputText=document.getElementById('input-text').value.toLowerCase();
     const output=document.getElementById('output-text');
     const inputArray=inputText.split('')
     let index

@@ -37,7 +37,7 @@ function decryptText() {
 }
 
 function readName() {
-    const inputText=document.getElementById('input-text').value;
+    const inputText=document.getElementById('input-text').value.toLowerCase();
     const inputArray=inputText.split('')
     return inputArray
 }
@@ -60,8 +60,8 @@ function createEncryptorArray() {
 }
 
 function createKeyword(inputArray) {
-    const keyword=document.querySelector('#keyword')
-    let matchedKeywordArray=keyword.value.split('')
+    const keyword=document.querySelector('#keyword').value.toLowerCase()
+    let matchedKeywordArray=keyword.split('')
     const keywordLength=matchedKeywordArray.length
 
     while(matchedKeywordArray.length<inputArray.length){

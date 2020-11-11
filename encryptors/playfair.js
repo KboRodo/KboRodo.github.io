@@ -206,8 +206,14 @@ function createKeywordArray(keyword){
 }
 
 function createKeyword(){
-    const keyword=document.querySelector('#keyword')
-    let keywordArray=keyword.value.split('')
+    const keyword=document.querySelector('#keyword').value.toLowerCase()
+    let keywordArray=keyword.split('')
+    keywordArray.forEach(element => {
+        if(element==='j')
+        {
+            keywordArray.splice(keywordArray.indexOf(element),1,'i')
+        }
+    });
 
     let noDuplicates = keywordArray.filter((c, index)=>{
         return keywordArray.indexOf(c)===index
@@ -216,12 +222,23 @@ function createKeyword(){
     return noDuplicates
 }
 function readText() {
-    const inputText=document.getElementById('input-text').value;
-    const inputArray=inputText.split('')//usunac powtorzenia
+    const inputText=document.getElementById('input-text').value.toLowerCase();
+    console.log(inputText)
+    const inputArray=inputText.split("")//usunac powtorzenia
+    inputArray.forEach(element => {
+        if(element==='j')
+        {
+            inputArray.splice(inputArray.indexOf(element),1,'i')
+        }
+    });
     return inputArray
 }
 
 function writeText(outputText) {
     const output=document.getElementById('output-text')
-    output.innerHTML=outputText.join('')
+    const outText=[]
+    outputText.forEach(element=>{
+        outText.push(element.join(""))
+    })
+    output.innerHTML=outText.join("")
 }//usunac wypisywanie przecinków
